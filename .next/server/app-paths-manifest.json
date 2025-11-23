@@ -1,0 +1,5 @@
+{
+  "/_not-found": "app/_not-found.js",
+  "/(root)/hashtag/[tag]/page": "app/(root)/hashtag/[tag]/page.js",
+  "/api/hashtags/[tag]/route": "app/api/hashtags/[tag]/route.js"
+}

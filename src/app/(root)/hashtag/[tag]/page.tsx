@@ -1,10 +1,14 @@
-import { supabase } from '@lib/supabaseClient';
+// src/app/(root)/hashtag/[tag]/page.tsx
+import { getSupabase } from '@lib/supabaseClient';
 
 interface HashtagPageProps {
   params: { tag: string };
 }
 
 export default async function HashtagPage({ params }: HashtagPageProps) {
+  const supabase = getSupabase();
+
+  // Fetch the hashtag data
   const { data: hashtagData } = await supabase
     .from('hashtags')
     .select('tweet_ids')
